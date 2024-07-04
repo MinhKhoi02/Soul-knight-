@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 487124044}
   - component: {fileID: 487124043}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: EnergyBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.673
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.652
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 1279373190}
   - component: {fileID: 1279373189}
   m_Layer: 5
-  m_Name: Health-TMP
+  m_Name: Energy-TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1361,6 +1361,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344003193}
   m_CullTransparentMesh: 1
+--- !u!1 &1348885568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1348885570}
+  - component: {fileID: 1348885569}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1348885569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348885568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28184ddf0055e1d41b0ac0a8f5afa818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerConfig: {fileID: 11400000, guid: 68428cf12c0ce404d82a55cad3976f29, type: 2}
+  healthBar: {fileID: 1239948856}
+  healthText: {fileID: 695891679}
+  armorBar: {fileID: 2047075809}
+  armorText: {fileID: 1374480337}
+  energyBar: {fileID: 487124043}
+  energyText: {fileID: 1279373189}
+--- !u!4 &1348885570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348885568}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.9748622, y: -1.6759446, z: 310.0644}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1374480335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,7 +1424,7 @@ GameObject:
   - component: {fileID: 1374480338}
   - component: {fileID: 1374480337}
   m_Layer: 5
-  m_Name: Health-TMP
+  m_Name: Armor-TMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1642,7 +1693,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1133090435
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1627277339
@@ -2002,7 +2053,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.738
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -2092,10 +2143,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerElf
       objectReference: {fileID: 0}
-    - target: {fileID: 4920740303596702438, guid: 655a9791a0b2fdc4a8fb52cfaf66553f, type: 3}
-      propertyPath: playerConfig
-      value: 
-      objectReference: {fileID: 11400000, guid: 68428cf12c0ce404d82a55cad3976f29, type: 2}
     - target: {fileID: 7291227043473298198, guid: 655a9791a0b2fdc4a8fb52cfaf66553f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.68
@@ -2341,6 +2388,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 1348885570}
   - {fileID: 6664236361519531379}
   - {fileID: 4900528452979911535}
   - {fileID: 7112248433408025786}
